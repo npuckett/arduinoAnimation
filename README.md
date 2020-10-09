@@ -3,7 +3,9 @@
 The animation tools library is a small set of helper functions and data structures for Arduino that use basic tools and methods of time-based animation to control various actuators.  The tools have been used to control LEDs, stepper motors, servos, and piezo buzzers.  The core of the library is based around 2 basic functions – oscillation & timeline– that can be layered onto eachother for more complex behaviours.These functions are all based on timers, so they do not block any other input/output functions used in a sketch.
 
 ```arduino
-To use this library, install it by downloading the folder and copying the animationTools folder to your Arduino Libray folder in Documents. Include it in your sketch using
+To use this library: 
+-Install it by downloading the folder and copying the animationTools folder to your Arduino Libray folder in Documents. 
+-Include it in your sketch using
 #include <animationTools.h>
 ```
 
