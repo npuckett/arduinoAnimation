@@ -41,7 +41,7 @@ Note: oscillate is designed to function as a very simple interpolation mechanism
 
 ### getTimelineValue
 #### Returns: integer
-This function returns the current value of a Timeline object. It functions the same as the time slider in an animation program to return the value of a graph at a specific moment.
+This method allows you to create a flexible keyframe animation controlled by Arduino
 
 #### Examples
 
@@ -49,7 +49,7 @@ This function returns the current value of a Timeline object. It functions the s
 Timeline rotationValues:  //define a new Timeline object called rotationValues
 
 
-//inside setup define the parameters of the Timeline
+//inside setup define the keyframe values at points on the Timeline
 void setup()
 {
 rotationValues.timeKey[0] = 0;   //set a rotation of 10 at time 0
