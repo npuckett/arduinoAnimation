@@ -80,6 +80,41 @@ int currentRotation = getTimelineValue(rotationValues); //to return the current 
 
 } 
 ```
+
+```arduino
+Timeline brightnessValues:  //define a new Timeline object called brightnessValues
+
+
+//inside setup define the keyframe values at points on the Timeline
+void setup()
+{
+brightnessValues.timeKey[0] = 0;   //set a brightness value of 0 at time 0
+brightnessValues.valKey[0] = 0;
+
+brightnessValues.timeKey[1] = 0;   //hold that value at 0 for 500 milliseconds
+brightnessValues.valKey[1] = 500;
+
+brightnessValues.timeKey[2] = 255;   //fade from 0 to 255 over 1 second
+brightnessValues.valKey[2] = 1500;
+
+brightnessValues.timeKey[3] = 255;   //hold that value for 500 milliseconds
+brightnessValues.valKey[3] = 2000;
+
+brightnessValues.timeKey[4] = 0;   //fade back to 0 over 2 seconds
+brightnessValues.valKey[4] = 4000;
+brightnessValues.totalKeys = 5;   //manually tell it how many keyframes
+
+}
+
+void loop()
+{
+int currentRotation = getTimelineValue(brightnessValues); //to return the current value pass the object in the getTimelineValue function
+
+} 
+```
+
+
+
 ### Data Structures
 
 
