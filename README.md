@@ -22,18 +22,18 @@ oscillate(int minVal, int maxVal, int offset, float multiplier, long timeInput)
 minVal //starting value of the oscillation
 maxVal //end value of the oscillation
 offset //moves initial start of the oscillation sequence. 
-multiplier //used to change the speed of the oscillation (typically < 1, smaller number = slower)
+speed //used to change the speed of the oscillation (integer between 0 - 1000, smaller number = slower)
 timeInput//value used to step across the sin wave (typically millis())
 ```
 
 #### Examples:
 
 ```arduino 
-//oscillate between 0 <-> 255 with a multiplier speed of 0.2
-int ledBrightness = oscillate(0,255,0,0.2,millis());
+//oscillate between 0 <-> 255 with a multiplier speed of 100
+int ledBrightness = oscillate(0,255,0,100);
 
-//oscillate between 20 <–> 150 with a multiplier speed of 0.5 
-int servoRotation = oscillate(20,150,0,0.5,millis()); 
+//oscillate between 20 <–> 150 with a multiplier speed of 500 
+int servoRotation = oscillate(20,150,0,500); 
 ```
 
 
