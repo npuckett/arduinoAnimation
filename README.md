@@ -69,13 +69,22 @@ void setup()
 
   //by default the timelines loop, but you can turn that off with
   //rotationValues.loop = false;
+    
+    
+    servo1.attach(servoPin1);
+//set the servo to the startValue
+servo1.write(rotationValues.valKey[0]);
+
+//allow 2 seconds for the servo to reset
+delay(2000);
 
 }
 
 void loop()
 {
-int currentRotation = getTimelineValue(rotationValues); //to return the current value pass the object in the getTimelineValue function
-
+//to return the current value pass the object in the getTimelineValue function
+int currentRotation = getTimelineValue(rotationValues); 
+servo1.write(currentRotation);
 } 
 ```
 
@@ -107,7 +116,8 @@ brightnessValues.totalKeys = 5;   //manually tell it how many keyframes
 
 void loop()
 {
-int currentRotation = getTimelineValue(brightnessValues); //to return the current value pass the object in the getTimelineValue function
+//to return the current value pass the object in the getTimelineValue function
+int currentRotation = getTimelineValue(brightnessValues); 
 
 } 
 ```
@@ -155,6 +165,22 @@ void setup()
 rotationValues.startVal = 0;  //the angle to start at
 rotationValues.endVal = 90;   //the angle to go to
 rotationValues.travelTime = 7000; //how long to take to get there in milliseconds
+
+servo1.attach(servoPin1);
+//set the servo to the startValue
+servo1.write(rotationValues.startVal);
+
+//give it time to get there
+delay(2000);
+}
+
+void loop()
+{
+
+servoAngle = moveTo(rotationValues);
+servo1.write(servoAngle);
+
+} 
 ```
 ### resetMove
 #### Returns: Nothing  
