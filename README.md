@@ -228,22 +228,28 @@ All timelines have the following parameters. Where X is the index of the array
 .valKey{X]
 ```
 These 2 parameters are typically defined together in the same manner you would input this type of data into an animation interface.  Define a value at a time.   The index should start at 0 and must be the same for the timeKey and valKey.
+
+
 ```
 .totalKeys
 ```
 At this point, you must manually define the total number of keyframes that you have created.  The maximum number of values is 10, but can be changed. (This will be fixed in a future version of the library)
+
 ```
 .timelineLoop
 ```
 This is True by default, but if you want the timeline to stop when it reaches the end it can be set to False.
+
 ```
 .startVal
 ```
 When using moveTo, you can set this parameter as the starting value on the timeline to animate FROM
+
 ```
 .endVal
 ```
 When using moveTo, you can set this parameter as the starting value on the timeline to animate TO
+
 ```
 .travelTime
 ```
