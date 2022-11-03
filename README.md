@@ -17,7 +17,7 @@ This function uses a simple sin wave to drive a continuous fade between 2 values
 
 The function has 5 inputs that can be changed dynamically
 ```arduino
-oscillate(int minVal, int maxVal, int offset, float multiplier, long timeInput)
+oscillate(int minVal, int maxVal, int offset, int speed)
 
 minVal //starting value of the oscillation
 maxVal //end value of the oscillation
