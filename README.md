@@ -117,7 +117,8 @@ brightnessValues.totalKeys = 5;   //manually tell it how many keyframes
 void loop()
 {
 //to return the current value pass the object in the getTimelineValue function
-int currentRotation = getTimelineValue(brightnessValues); 
+int currrentBrightness = getTimelineValue(brightnessValues); 
+analogWrite(6,currentBrightness);
 
 } 
 ```
