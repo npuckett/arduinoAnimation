@@ -15,7 +15,7 @@ speed is between 0 - 1000
 #include <animationTools.h>
 
 Servo servo1;
-int servoPin1 = 3;
+int servoPin1 = 2;
 int servoAngle1;
 int servoMinAngle1 = 0;
 int servoMaxAngle1 = 90;

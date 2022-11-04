@@ -14,7 +14,7 @@ rotationValues.travelTime = 7000; //how long to take to get there in millisecond
 #include <animationTools.h>
 
 Servo servo1;
-int servoPin1 = 3;
+int servoPin1 = 2;
 int servoAngle;
 
 

@@ -19,7 +19,7 @@ Trigger the behaviour with a sensor
 #include <animationTools.h>
 
 Servo servo1;
-int servoPin1 = 3;
+int servoPin1 = 2;
 int servoAngle;
 
 
