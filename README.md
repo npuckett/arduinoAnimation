@@ -4,7 +4,7 @@ The animation tools library is a small set of helper functions and data structur
 
 ```arduino
 To use this library: 
--Install it by downloading the folder and copying the animationTools folder to your Arduino Libray folder in Documents. 
+-Install it by downloading the folder and copying the folder to your Arduino Libray folder in Documents. 
 -Include it in your sketch using
 #include <animationTools.h>
 ```
