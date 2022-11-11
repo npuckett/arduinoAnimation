@@ -98,8 +98,8 @@ void setup()
 brightnessValues.timeKey[0] = 0;   //set a brightness value of 0 at time 0
 brightnessValues.valKey[0] = 0;
 
-brightnessValues.timeKey[1] = 0;   //hold that value at 0 for 500 milliseconds
-brightnessValues.valKey[1] = 500;
+brightnessValues.timeKey[1] = 500;   //hold that value at 0 for 500 milliseconds
+brightnessValues.valKey[1] = 0;
 
 brightnessValues.timeKey[2] = 1500;   //fade from 0 to 255 over 1 second
 brightnessValues.valKey[2] = 255;
@@ -117,7 +117,8 @@ brightnessValues.totalKeys = 5;   //manually tell it how many keyframes
 void loop()
 {
 //to return the current value pass the object in the getTimelineValue function
-int currentRotation = getTimelineValue(brightnessValues); 
+int currrentBrightness = getTimelineValue(brightnessValues); 
+analogWrite(6,currentBrightness);
 
 } 
 ```
