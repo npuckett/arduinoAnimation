@@ -1,8 +1,41 @@
+#include "Arduino.h"
+
+// Toggle class definition
+class Toggle {
+  private:
+    unsigned long lastSwitch;
+    bool currentState;
+    
+  public:
+    Toggle(); // Constructor declaration
+
+    // Method to update and get the current state
+    // Takes toggleRate as an argument
+    bool update(int toggleRate);
+};
+
+// Toggle class constructor implementation
+Toggle::Toggle() {
+  lastSwitch = 0; // Initialize lastSwitch to 0
+  currentState = false; // Initialize currentState to false
+}
+
+// Method to update and get the current state based on the toggleRate
+bool Toggle::update(int toggleRate) {
+  // Check if the specified rate time has passed
+  if(millis() - lastSwitch >= toggleRate) {
+    lastSwitch = millis(); // Update the last switch time to current time
+    currentState = !currentState; // Toggle the state
+  }
+  return currentState; // Return the current state
+}
+
+
 
 //helper object to create/hold keyframe data
 struct Timeline
 {
-int totalKeys = 20;  
+int totalKeys = 0;  
 int timeKey[20];
 int valKey[20];
 int seqNumber = 1;
@@ -17,6 +50,17 @@ int endVal;
 int travelTime;
 boolean isPlaying = false;
 boolean arrived = false; 
+
+// Method to add a keyframe
+    void addKey(int time, int val) {
+        if (totalKeys < 20) { // Check not to exceed array size
+            timeKey[totalKeys] = time;
+            valKey[totalKeys] = val;
+            totalKeys++; // Increment totalKeys since we added a key
+        } else {
+            // Optionally handle the error if too many keys are added
+        }
+    }
 
 };
 int moveTo(Timeline &inputTimeline)
